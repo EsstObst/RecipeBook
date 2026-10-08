@@ -1,7 +1,7 @@
 ---
 title: Potato Mochis
 cover: ./cover.jpg
-tags: [Dessert, Kartoffel, Snack]
+tags: [Kartoffel, Snack]
 duration: 60
 servings: 12
 servingsLabel: Stück

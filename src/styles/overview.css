@@ -39,3 +39,4 @@
 .card-title { margin: 0; font-size: 1.1rem; }
 .card-meta { display: flex; gap: 0.75rem; color: var(--muted); font-size: 0.9rem; }
 .empty { padding: 2rem 0; color: var(--muted); text-align: center; }
+.uncooked-chip { border-style: dashed; }

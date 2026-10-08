@@ -10,7 +10,8 @@ function init({ recipes, tags }: Data): void {
   const cards = new Map([...grid.querySelectorAll<HTMLElement>('.card')].map((card) => [card.dataset.id!, card]));
   const search = document.querySelector<HTMLInputElement>('.search')!;
   const sort = document.querySelector<HTMLSelectElement>('.sort')!;
-  const chips = [...document.querySelectorAll<HTMLButtonElement>('.tag-chip')];
+  const chips = [...document.querySelectorAll<HTMLButtonElement>('.tag-chip[data-tag]')];
+  const uncookedChip = document.querySelector<HTMLButtonElement>('.uncooked-chip')!;
   const empty = document.querySelector<HTMLElement>('.empty')!;
   const count = document.querySelector<HTMLElement>('.result-count')!;
   let state: FilterState = parseState(location.search, tags);
@@ -21,6 +22,7 @@ function init({ recipes, tags }: Data): void {
     for (const [id, card] of cards) card.hidden = !visible.has(id);
     for (const id of ids) grid.appendChild(cards.get(id)!);
     for (const chip of chips) chip.setAttribute('aria-pressed', String(state.tags.includes(chip.dataset.tag!)));
+    uncookedChip.setAttribute('aria-pressed', String(state.uncooked));
     if (search.value !== state.q) search.value = state.q;
     sort.value = state.sort;
     empty.hidden = ids.length > 0;
@@ -44,6 +46,10 @@ function init({ recipes, tags }: Data): void {
       render();
     });
   }
+  uncookedChip.addEventListener('click', () => {
+    state = { ...state, uncooked: !state.uncooked };
+    render();
+  });
   window.addEventListener('popstate', () => {
     state = parseState(location.search, tags);
     render();

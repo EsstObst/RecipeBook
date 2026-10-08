@@ -18,6 +18,7 @@ const summaries: RecipeSummary[] = recipes.map((r) => ({
   duration: r.data.duration ?? null,
   added: r.data.added.toISOString().slice(0, 10),
   ingredients: ingredientText(r.body ?? ''),
+  cooked: r.data.cooked,
 }));
 const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c');
 ---
@@ -33,6 +34,7 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
       </select>
     </div>
     <div class="tag-filter">
+      <button type="button" class="tag tag-chip uncooked-chip" aria-pressed="false">Noch nicht gekocht</button>
       {tags.map((t) => <button type="button" class="tag tag-chip" data-tag={t} aria-pressed="false">{t}</button>)}
     </div>
   </section>

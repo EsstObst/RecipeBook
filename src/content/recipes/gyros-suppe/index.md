@@ -4,7 +4,8 @@ cover: ./cover.jpg
 tags: [Schwein, Suppe]
 duration: 90
 rating: 5
-servings: 10
+cooked: true
+servings: 8
 source: https://www.youtube.com/watch?v=e5MVXmBco_o
 added: 2026-10-08
 ---

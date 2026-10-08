@@ -12,7 +12,7 @@ added: 2026-10-08
 
 - {{25 g}} Pinienkerne
 - {{3}} Zwiebeln, fein gewürfelt
-- Knoblauch, fein gehackt
+- {{2}} Knoblauchzehen, fein gehackt
 - {{4}} Karotten, in dünnen Scheiben
 - {{200 g}} Babyspinat, grob zerkleinert
 - {{600 g}} Gnocchi (Kühlregal)

@@ -9,19 +9,21 @@ const r = (id: string, title: string, extra: Partial<RecipeSummary> = {}): Recip
   duration: null,
   added: '2026-10-08',
   ingredients: '',
+  cooked: false,
   ...extra,
 });
 
 const items = [
-  r('orzo', 'Mediterrane Hähnchen-Orzo', { tags: ['Hähnchen', 'Hauptspeise'], rating: 4, duration: 60, ingredients: 'Orzo · Babyspinat' }),
+  r('orzo', 'Mediterrane Hähnchen-Orzo', { tags: ['Hähnchen', 'Hauptspeise'], rating: 4, duration: 60, ingredients: 'Orzo · Babyspinat', cooked: true }),
   r('gnocchi', 'Gnocchi in Spinat-Frischkäse-Soße', { tags: ['Hauptspeise', 'Vegetarisch'], duration: 20, added: '2026-10-09', ingredients: 'Gnocchi · Babyspinat' }),
-  r('steak', 'Steak braten', { tags: ['Hauptspeise', 'Rind'], rating: 5, duration: 15 }),
+  r('steak', 'Steak braten', { tags: ['Hauptspeise', 'Rind'], rating: 5, duration: 15, cooked: true }),
   r('mochis', 'Potato Mochis', { tags: ['Snack'] }),
 ];
-const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added' }> = {}) => ({
+const state = (over: Partial<{ tags: string[]; q: string; sort: 'name' | 'rating' | 'duration' | 'added'; uncooked: boolean }> = {}) => ({
   tags: [],
   q: '',
   sort: 'name' as const,
+  uncooked: false,
   ...over,
 });
 
@@ -36,6 +38,11 @@ describe('normalize', () => {
 describe('filterAndSort', () => {
   it('sorts by name by default', () => {
     expect(filterAndSort(items, state())).toEqual(['gnocchi', 'orzo', 'mochis', 'steak']);
+  });
+
+  it('shows only recipes not cooked yet when requested', () => {
+    expect(filterAndSort(items, state({ uncooked: true }))).toEqual(['gnocchi', 'mochis']);
+    expect(filterAndSort(items, state({ uncooked: true, tags: ['Snack'] }))).toEqual(['mochis']);
   });
 
   it('requires all selected tags', () => {
@@ -65,7 +72,8 @@ describe('URL state', () => {
   const known = ['Hähnchen', 'Hauptspeise', 'Rind'];
 
   it('round-trips state through the query string', () => {
-    const s = { tags: ['Hähnchen', 'Rind'], q: 'orzo', sort: 'rating' as const };
+    const s = { tags: ['Hähnchen', 'Rind'], q: 'orzo', sort: 'rating' as const, uncooked: true };
+    expect(toSearch(s)).toContain('gekocht=nein');
     expect(parseState(toSearch(s), known)).toEqual(s);
   });
 
@@ -74,6 +82,6 @@ describe('URL state', () => {
   });
 
   it('ignores unknown tags and invalid sort values', () => {
-    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name' });
+    expect(parseState('?tags=Main%20dish,Rind&sort=xyz', known)).toEqual({ tags: ['Rind'], q: '', sort: 'name', uncooked: false });
   });
 });

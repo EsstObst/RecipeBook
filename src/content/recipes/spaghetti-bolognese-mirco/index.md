@@ -4,6 +4,7 @@ cover: ./cover.jpg
 tags: [Hauptspeise, Rind]
 duration: 90
 rating: 5
+cooked: true
 servings: 8
 source: Mirco
 added: 2026-10-08
@@ -22,7 +23,7 @@ added: 2026-10-08
 - {{3}} Päckchen Bolognese-Fix (Maggi oder Knorr)
 - Senf
 - Majoran
-- Pasta
+- {{800 g}} Spaghetti
 - Parmesan (zum Servieren)
 
 ## Zubereitung
@@ -35,4 +36,4 @@ added: 2026-10-08
 6. **Hack zurückgeben:** Hackfleisch samt Fleischsaft zurück in den Topf geben und Senf nach Geschmack einrühren.
 7. **Einköcheln lassen:** Ohne Deckel ca. 1 Std. sanft köcheln lassen, damit die Soße einkocht. Dabei regelmäßig umrühren, damit nichts ansetzt.
 8. **Abschmecken:** Bei Bedarf nachwürzen und Majoran nach Geschmack zugeben.
-9. **Servieren:** Mit Pasta servieren und reichlich Parmesan darüber geben.
+9. **Servieren:** Spaghetti nach Packungsanweisung kochen. Mit der Soße servieren und reichlich Parmesan darüber geben.

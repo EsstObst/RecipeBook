@@ -24,6 +24,7 @@ const recipes = defineCollection({
         cover: image().optional(),
         duration: z.number().int().positive().optional(),
         rating: z.number().int().min(1).max(5).optional(),
+        cooked: z.boolean().default(false),
         source: z
           .string()
           .min(1)
