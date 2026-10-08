@@ -1,5 +1,6 @@
 ---
 title: Biergulasch
+cover: ./cover.jpg
 tags: [Hauptspeise, Schwein]
 duration: 120
 servings: 4
@@ -9,7 +10,7 @@ added: 2026-10-08
 
 ## Zutaten
 
-- {{500 g}} Schweinefleisch für Gulasch (oder Schweineschnitzel), in ca. 3 cm großen Würfeln
+- {{750 g}} Schweinefleisch für Gulasch (oder Schweineschnitzel), in ca. 3 cm großen Würfeln
 - {{2 EL}} Butterschmalz
 - {{1}} Zwiebel, gewürfelt
 - {{1}} Karotte, fein gewürfelt
@@ -19,7 +20,7 @@ added: 2026-10-08
 - {{600 ml}} Gemüsebrühe
 - {{1/2 TL}} Senf
 - {{1 TL}} Salz
-- {{1 TL}} Pfeffer, gemahlen
+- {{1/2 TL}} Pfeffer, gemahlen
 - {{1 TL}} Paprikapulver, edelsüß
 - {{1 EL}} Saucenbinder
 - {{1 EL}} Crème fraîche
