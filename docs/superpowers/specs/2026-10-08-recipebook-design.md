@@ -1,7 +1,7 @@
 # RecipeBook – Design
 
 Datum: 2026-10-08
-Status: Entwurf zur Freigabe
+Status: Freigegeben (2026-10-08)
 
 ## Ziel
 
@@ -187,7 +187,7 @@ Quelle: `import/notion-export.zip` (entpackt nach `import/raw/`) und Cover-Bilde
 - 11 Rezepte werden übernommen; die leere Vorlage „Untitled“ wird übersprungen.
 - Felder: `Dauer` → `duration`, `Rating` (⭐-Anzahl) → `rating`, `Tags` → `tags` (gemappt), `Quelle:` → `source`, `Personen:` → `servings`/`servingsLabel`. `added` = 2026-10-08. Die Notion-Box (`<aside>`) entfällt, ihr Inhalt geht in die Frontmatter.
 - Jedes Rezept wird vollständig nach der Stilrichtlinie überarbeitet (Titel, Einheiten, Zutatenreihenfolge, Schritt-Titel, Abschnitte, `{{…}}`-Markierungen).
-- **Cover:** 10 Bilder vorhanden (2× HEIC). Für „Nudelsalat mit Feta, getrockneten Tomaten & Rucola“ fehlt ein Bild → Platzhalter.
+- **Cover:** Für alle 11 Rezepte vorhanden (2× HEIC).
 - **Tag-Mapping:**
 
   | Notion | neu |
@@ -208,7 +208,7 @@ Quelle: `import/notion-export.zip` (entpackt nach `import/raw/`) und Cover-Bilde
   | Ofenkartoffel | `Personen: 1–2` | `servings` 2, `{{2}}` große Kartoffeln |
   | Potato Mochis | „12 Stück“; „zwölf Portionen“ im Text skaliert nicht | `servings` 12, `servingsLabel` Stück; „in {{12}} Portionen teilen“ |
   | Rockos Stew | „1 EL Mehl + 30 g (für später)“ | zwei Zeilen: `{{1 EL}} Mehl (zum Wenden)`, `{{30 g}} Mehl (für die Soße)` |
-  | Bolognese | keine Personenzahl; Bereiche mit gemischten Einheiten | `servings` 6; `{{800–1000 ml}}`, `{{500–1000 ml}}` |
+  | Bolognese | keine Personenzahl; Bereiche mit gemischten Einheiten | `servings` 8; `{{800–1000 ml}}`, `{{500–1000 ml}}` |
   | Steak | Menge im Titel; Abschnitte Vorbereitung/Tipps/Notizen | Titel „Steak braten“; Vorbereitung als erste Schritte; Tipps + Notizen zusammenführen |
 
 ## Qualitätssicherung
