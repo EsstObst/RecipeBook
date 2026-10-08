@@ -25,7 +25,7 @@ export function normalize(text: string): string {
     .replace(/oe/g, 'o')
     .replace(/ue/g, 'u')
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '');
+    .replace(/[\u0300-\u036f]/g, '');
 }
 
 type Compare = (a: RecipeSummary, b: RecipeSummary) => number;

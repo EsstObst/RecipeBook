@@ -18,7 +18,7 @@ const summaries: RecipeSummary[] = recipes.map((r) => ({
   added: r.data.added.toISOString().slice(0, 10),
   ingredients: ingredientText(r.body ?? ''),
 }));
-const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\u003c');
+const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c');
 ---
 <Base title="RecipeBook">
   <section class="controls">
