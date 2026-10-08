@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import RecipeCard from '../components/RecipeCard.astro';
 import type { RecipeSummary } from '../lib/filter';
 import { ingredientText } from '../lib/recipe-text';
+import { url } from '../lib/url';
 import { getRecipes } from '../lib/recipes';
 import { allTags } from '../lib/tags';
 import '../styles/overview.css';
@@ -20,7 +21,7 @@ const summaries: RecipeSummary[] = recipes.map((r) => ({
 }));
 const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c');
 ---
-<Base title="RecipeBook">
+<Base title="RecipeBook" image={new URL(url('icon-512.png'), Astro.site).href}>
   <section class="controls">
     <div class="controls-row">
       <input type="search" class="search" placeholder="Rezept oder Zutat suchen …" aria-label="Suche" />

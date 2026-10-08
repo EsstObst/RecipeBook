@@ -9,6 +9,7 @@ interface Props {
 }
 const { title, description = 'Meine Rezeptsammlung', image } = Astro.props;
 const pageTitle = title === 'RecipeBook' ? title : `${title} · RecipeBook`;
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 ---
 <!doctype html>
 <html lang="de">
@@ -17,6 +18,21 @@ const pageTitle = title === 'RecipeBook' ? title : `${title} · RecipeBook`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#191817" />
+    <link rel="manifest" href={url('manifest.webmanifest')} />
+    <link rel="icon" href={url('icon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={url('apple-touch-icon.png')} />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Rezepte" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RecipeBook" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    {image && <meta property="og:image" content={image} />}
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
     <script is:inline>
       try {
         const t = localStorage.getItem('theme');

@@ -1,11 +1,11 @@
 ---
-import { Image } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Placeholder from '../../components/Placeholder.astro';
 import Stars from '../../components/Stars.astro';
 import { getRecipes, type Recipe } from '../../lib/recipes';
-import { tagUrl } from '../../lib/url';
+import { tagUrl, url } from '../../lib/url';
 import '../../styles/recipe.css';
 
 export async function getStaticPaths() {
@@ -17,8 +17,11 @@ const { recipe } = Astro.props as { recipe: Recipe };
 const { Content } = await render(recipe);
 const d = recipe.data;
 const sourceIsLink = d.source?.startsWith('http') ?? false;
+const ogImage = d.cover ? await getImage({ src: d.cover, width: 1200, format: 'jpeg' }) : null;
+const ogImageUrl = ogImage ? new URL(ogImage.src, Astro.site).href : new URL(url('icon-512.png'), Astro.site).href;
+const description = [d.duration ? `${d.duration} Min.` : null, ...d.tags].filter(Boolean).join(' · ');
 ---
-<Base title={d.title}>
+<Base title={d.title} description={description} image={ogImageUrl}>
   <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings}>
     <div class="recipe-hero">
       {d.cover ? <Image src={d.cover} alt={d.title} widths={[480, 960, 1600]} sizes="100vw" loading="eager" /> : <Placeholder />}
