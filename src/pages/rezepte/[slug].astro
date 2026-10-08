@@ -31,7 +31,6 @@ const description = [d.duration ? `${d.duration} Min.` : null, ...d.tags].filter
       <ul class="recipe-meta">
         {d.duration && <li>⏱ {d.duration} Min.</li>}
         {d.rating && <li><Stars rating={d.rating} /></li>}
-        {d.cooked && <li class="cooked">✓ Gekocht</li>}
         {d.source && (
           <li>
             Quelle:{' '}

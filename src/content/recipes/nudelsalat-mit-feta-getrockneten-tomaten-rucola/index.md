@@ -4,7 +4,6 @@ cover: ./cover.jpg
 tags: [Salat, Vegetarisch]
 duration: 30
 rating: 5
-cooked: true
 servings: 8
 source: Janita
 added: 2026-10-08

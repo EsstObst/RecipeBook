@@ -4,7 +4,6 @@ cover: ./cover.jpg
 tags: [Hauptspeise, Vegetarisch]
 duration: 45
 rating: 3
-cooked: true
 servings: 2
 source: Eigenes Rezept
 added: 2026-10-08

@@ -4,7 +4,6 @@ cover: ./cover.jpg
 tags: [Hauptspeise, Rind]
 duration: 90
 rating: 5
-cooked: true
 servings: 8
 source: Mirco
 added: 2026-10-08

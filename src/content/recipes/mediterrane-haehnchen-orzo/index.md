@@ -4,7 +4,6 @@ cover: ./cover.jpg
 tags: [Hähnchen, Hauptspeise, OnePot]
 duration: 60
 rating: 4
-cooked: true
 servings: 4
 source: TikTok
 added: 2026-10-08

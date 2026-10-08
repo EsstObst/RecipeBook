@@ -4,7 +4,6 @@ cover: ./cover.jpg
 tags: [Hauptspeise, Rind]
 duration: 15
 rating: 5
-cooked: true
 servings: 1
 source: Eigenes Rezept
 added: 2026-10-08

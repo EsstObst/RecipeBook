@@ -3,6 +3,7 @@ title: Gnocchi in Spinat-Frischkäse-Soße
 cover: ./cover.jpg
 tags: [Hauptspeise, Vegetarisch]
 duration: 20
+rating: 4
 servings: 4
 source: HelloFresh
 added: 2026-10-08

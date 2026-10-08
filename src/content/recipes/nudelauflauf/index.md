@@ -3,6 +3,7 @@ title: Nudelauflauf
 cover: ./cover.jpg
 tags: [Auflauf, Hauptspeise, Schwein]
 duration: 50
+rating: 4
 servings: 3
 source: https://emmikochteinfach.de/nudelauflauf/
 added: 2026-10-08

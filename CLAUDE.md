@@ -23,7 +23,7 @@ Eingaben können sein: URL, PDF, Screenshot/Foto eines Rezepts, kopierter Text, 
 7. **Plausi-Check** (bei jedem neuen oder geänderten Rezept): Mengen pro Portion realistisch? Fehlen Mengen, die man zum Kochen braucht (z. B. Wasser für Reis, Nudelmenge)? Wird jede Zutat verwendet und jede verwendete Zutat aufgeführt? Garzeiten, Temperaturen und Reihenfolge stimmig? Passen Tags und Dauer? Reine Stilfehler direkt korrigieren; inhaltliche Verbesserungsvorschläge dem Nutzer kurz auflisten und erst nach seinem OK umsetzen.
 8. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://esstobst.github.io/RecipeBook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
 
-Gekocht melden („Hab X gekocht“, ggf. mit Sternen): `cooked: true` und ggf. `rating` setzen, bauen, pushen. Neue Rezepte starten ohne `cooked`.
+Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. Ein Rezept gilt als gekocht, sobald es Sterne hat (Filter „Noch nicht gekocht“). Ohne Sternangabe nachfragen.
 
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.
 
@@ -35,8 +35,7 @@ title: Mediterrane Hähnchen-Orzo
 cover: ./cover.jpg            # optional
 tags: [Hähnchen, Hauptspeise, OnePot]
 duration: 60                  # Minuten, optional aber immer setzen
-rating: 4                     # 1–5, optional (nur der Nutzer vergibt Sterne)
-cooked: true                  # optional; nur setzen, wenn der Nutzer das Rezept gekocht hat
+rating: 4                     # 1–5, optional (nur der Nutzer vergibt Sterne; Rezept mit Sternen = schon gekocht)
 servings: 4
 servingsLabel: Stück          # optional, Standard „Personen“
 source: TikTok                # optional; URLs vollständig
