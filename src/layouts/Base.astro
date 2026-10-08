@@ -18,7 +18,8 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#191817" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#191817" />
     <link rel="manifest" href={url('manifest.webmanifest')} />
     <link rel="icon" href={url('icon.svg')} type="image/svg+xml" />
     <link rel="apple-touch-icon" href={url('apple-touch-icon.png')} />

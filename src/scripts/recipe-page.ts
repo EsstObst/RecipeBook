@@ -73,6 +73,7 @@ function initChecklist(article: HTMLElement): void {
     item.dataset.checkId = String(index);
     item.classList.add('checkable');
   });
+  checked = new Set([...checked].filter((id) => Number(id) < items.length));
 
   function render(): void {
     for (const item of items) item.classList.toggle('is-checked', checked.has(item.dataset.checkId!));
@@ -102,16 +103,27 @@ function initWakeLock(article: HTMLElement): void {
   const input = label.querySelector<HTMLInputElement>('.wake-lock-input')!;
   if (!('wakeLock' in navigator)) return;
   label.hidden = false;
+  input.checked = false;
   let sentinel: WakeLockSentinel | null = null;
+  let pending = false;
 
   async function request(): Promise<void> {
+    if (pending) return;
+    pending = true;
     try {
-      sentinel = await navigator.wakeLock.request('screen');
-      sentinel.addEventListener('release', () => {
-        sentinel = null;
+      const lock = await navigator.wakeLock.request('screen');
+      if (!input.checked) {
+        await lock.release();
+        return;
+      }
+      sentinel = lock;
+      lock.addEventListener('release', () => {
+        if (sentinel === lock) sentinel = null;
       });
     } catch {
       input.checked = false;
+    } finally {
+      pending = false;
     }
   }
 
@@ -119,8 +131,9 @@ function initWakeLock(article: HTMLElement): void {
     if (input.checked) {
       await request();
     } else {
-      await sentinel?.release();
+      const lock = sentinel;
       sentinel = null;
+      await lock?.release();
     }
   });
   document.addEventListener('visibilitychange', () => {

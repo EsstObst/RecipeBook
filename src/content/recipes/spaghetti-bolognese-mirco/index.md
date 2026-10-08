@@ -16,7 +16,7 @@ added: 2026-10-08
 - {{3–4}} Karotten, klein geschnitten
 - {{1 kg}} gemischtes Hackfleisch
 - Tomatenmark
-- {{1}} Schuss Weißwein oder Rotwein (zum Ablöschen)
+- 1 Schuss Weißwein oder Rotwein (zum Ablöschen)
 - {{800–1000 ml}} passierte Tomaten
 - {{500–1000 ml}} Gemüsebrühe
 - {{3}} Päckchen Bolognese-Fix (Maggi oder Knorr)
