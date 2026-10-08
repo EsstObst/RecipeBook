@@ -1,5 +1,6 @@
 ---
 title: Mediterrane Hähnchen-Orzo
+cover: ./cover.jpg
 tags: [Hähnchen, Hauptspeise, OnePot]
 duration: 60
 rating: 4
