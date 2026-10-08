@@ -27,6 +27,7 @@ added: 2026-10-08
 - {{2 EL}} Zucker
 - {{1 EL}} Sake
 - {{1 TL}} Kartoffelstärke
+- {{2 EL}} Wasser
 
 ## Zubereitung
 

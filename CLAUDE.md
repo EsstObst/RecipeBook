@@ -20,7 +20,8 @@ Eingaben können sein: URL, PDF, Screenshot/Foto eines Rezepts, kopierter Text, 
 4. Fotos: `npm run image -- "<foto>" src/content/recipes/<slug>/cover.jpg`; Schrittbilder als `schritt-<N>.jpg` (bei mehreren `schritt-<N>-2.jpg`). Ohne Angabe des Nutzers ist das erste Foto das Cover.
 5. `index.md` nach Format und Stilrichtlinie unten schreiben. `added` = heutiges Datum.
 6. Fehlende Dauer schätzen und dem Nutzer sagen. Inhaltliche Unklarheiten (fehlende Zutaten, widersprüchliche Mengen, fehlende Portionszahl) nachfragen, nicht raten.
-7. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://esstobst.github.io/RecipeBook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
+7. **Plausi-Check** (bei jedem neuen oder geänderten Rezept): Mengen pro Portion realistisch? Fehlen Mengen, die man zum Kochen braucht (z. B. Wasser für Reis, Nudelmenge)? Wird jede Zutat verwendet und jede verwendete Zutat aufgeführt? Garzeiten, Temperaturen und Reihenfolge stimmig? Passen Tags und Dauer? Reine Stilfehler direkt korrigieren; inhaltliche Verbesserungsvorschläge dem Nutzer kurz auflisten und erst nach seinem OK umsetzen.
+8. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://esstobst.github.io/RecipeBook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
 
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.
 
@@ -64,7 +65,7 @@ Nur `Zutaten` und `Zubereitung` sind Pflicht; erlaubte Abschnitte sind ausschlie
 
 **Zutaten:**
 - Format `{{Menge Einheit}} Zutat, Verarbeitung (Hinweis)` – z. B. `{{2}} Zwiebeln, fein gewürfelt`.
-- Einheiten: `g`, `kg`, `ml`, `l`, `EL`, `TL`, `Prise`, `Dose`, `Bund`, `Packung`, `Stück` (nur wo nötig), `Tassen` nur wenn die Quelle so misst. Immer Leerzeichen vor der Einheit, Einheiten nie in Großbuchstaben.
+- Einheiten: `g`, `kg`, `ml`, `l`, `EL`, `TL`, `Prise`, `Dose`, `Bund`, `Packung`, `Päckchen`, `Zweig`, `Stück` (nur wo nötig), `Tassen` nur wenn die Quelle so misst. Immer Leerzeichen vor der Einheit, Einheiten nie in Großbuchstaben.
 - Brüche als `1/2`, Dezimalzahlen mit Komma.
 - Reihenfolge der Verwendung; Grundzutaten ohne Menge (Öl, Salz, Pfeffer, Zucker, Gewürze) gesammelt am Ende, z. B. `- Öl, Salz, Pfeffer`.
 - Jede Zutat aus der Zubereitung steht in der Liste und umgekehrt. Geräte gehören in `Equipment`.

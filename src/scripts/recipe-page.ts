@@ -72,6 +72,7 @@ function initChecklist(article: HTMLElement): void {
   items.forEach((item, index) => {
     item.dataset.checkId = String(index);
     item.classList.add('checkable');
+    item.tabIndex = 0;
   });
   checked = new Set([...checked].filter((id) => Number(id) < items.length));
 
@@ -81,15 +82,26 @@ function initChecklist(article: HTMLElement): void {
     writeStorage(key, checked.size === 0 ? null : serializeChecked(checked));
   }
 
-  article.querySelector('.recipe-body')!.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement;
-    if (target.closest('a, img, button')) return;
-    const item = target.closest<HTMLElement>('.checkable');
-    if (!item) return;
+  function toggle(item: HTMLElement): void {
     const id = item.dataset.checkId!;
     if (checked.has(id)) checked.delete(id);
     else checked.add(id);
     render();
+  }
+
+  const body = article.querySelector<HTMLElement>('.recipe-body')!;
+  body.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+    if (target.closest('a, img, button')) return;
+    const item = target.closest<HTMLElement>('.checkable');
+    if (item) toggle(item);
+  });
+  body.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    const item = event.target as HTMLElement;
+    if (!item.classList.contains('checkable')) return;
+    event.preventDefault();
+    toggle(item);
   });
   reset.addEventListener('click', () => {
     checked = new Set();

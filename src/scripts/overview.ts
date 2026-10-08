@@ -24,7 +24,7 @@ function init({ recipes, tags }: Data): void {
     if (search.value !== state.q) search.value = state.q;
     sort.value = state.sort;
     empty.hidden = ids.length > 0;
-    count.textContent = ids.length === recipes.length ? `${ids.length} Rezepte` : `${ids.length} von ${recipes.length} Rezepten`;
+    count.textContent = ids.length === recipes.length ? `${ids.length} ${ids.length === 1 ? 'Rezept' : 'Rezepte'}` : `${ids.length} von ${recipes.length} Rezepten`;
     history.replaceState(null, '', toSearch(state) || location.pathname);
   }
 

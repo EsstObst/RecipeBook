@@ -36,7 +36,7 @@ const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c
       {tags.map((t) => <button type="button" class="tag tag-chip" data-tag={t} aria-pressed="false">{t}</button>)}
     </div>
   </section>
-  <p class="result-count" aria-live="polite">{recipes.length} Rezepte</p>
+  <p class="result-count" aria-live="polite">{recipes.length} {recipes.length === 1 ? 'Rezept' : 'Rezepte'}</p>
   <ul class="card-grid">
     {recipes.map((r) => <RecipeCard recipe={r} />)}
   </ul>

@@ -26,6 +26,5 @@ added: 2026-10-08
 
 1. **Fleisch anbraten:** Gyros im Topf heiß anbraten. Sobald etwas Farbe entstanden ist, Zwiebeln und Paprika zugeben und anschmoren.
 2. **Würzen:** Chili, Knoblauch und Paprikapulver zugeben und ebenfalls leicht anschwitzen.
-3. **Tomaten und Mais zugeben:** Passierte Tomaten und Mais zugeben.
-4. **Köcheln lassen:** Mit Brühe und Sahne auffüllen. Mit Deckel ca. 1 Std. köcheln lassen.
-5. **Abschmecken und servieren:** Mit Salz und Pfeffer abschmecken und servieren.
+3. **Aufgießen und köcheln:** Passierte Tomaten und Mais zugeben, mit Brühe und Sahne auffüllen. Mit Deckel ca. 1 Std. köcheln lassen.
+4. **Abschmecken und servieren:** Mit Salz und Pfeffer abschmecken und servieren.
