@@ -1,0 +1,21 @@
+{
+  "name": "recipebook",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "vitest run --passWithNoTests",
+    "image": "node scripts/prepare-image.mjs"
+  },
+  "dependencies": {
+    "astro": "5.18.2",
+    "sharp": "0.34.5"
+  },
+  "devDependencies": {
+    "heic-convert": "2.1.0",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  }
+}
