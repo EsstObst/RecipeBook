@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Placeholder from '../../components/Placeholder.astro';
+import Stars from '../../components/Stars.astro';
+import { getRecipes, type Recipe } from '../../lib/recipes';
+import { tagUrl } from '../../lib/url';
+import '../../styles/recipe.css';
+
+export async function getStaticPaths() {
+  const recipes = await getRecipes();
+  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe } }));
+}
+
+const { recipe } = Astro.props as { recipe: Recipe };
+const { Content } = await render(recipe);
+const d = recipe.data;
+const sourceIsLink = d.source?.startsWith('http') ?? false;
+---
+<Base title={d.title}>
+  <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings}>
+    <div class="recipe-hero">
+      {d.cover ? <Image src={d.cover} alt={d.title} widths={[480, 960, 1600]} sizes="100vw" loading="eager" /> : <Placeholder />}
+    </div>
+    <header class="recipe-header">
+      <h1>{d.title}</h1>
+      <ul class="recipe-meta">
+        {d.duration && <li>⏱ {d.duration} Min.</li>}
+        {d.rating && <li><Stars rating={d.rating} /></li>}
+        {d.source && (
+          <li>
+            Quelle:{' '}
+            {sourceIsLink ? <a href={d.source} target="_blank" rel="noopener">{new URL(d.source).hostname}</a> : d.source}
+          </li>
+        )}
+      </ul>
+      <ul class="tag-list">
+        {d.tags.map((t) => <li><a class="tag" href={tagUrl(t)}>{t}</a></li>)}
+      </ul>
+    </header>
+    <div class="recipe-toolbar">
+      <div class="servings" role="group" aria-label="Portionen">
+        <button type="button" class="servings-btn" data-step="-1" aria-label="Weniger">−</button>
+        <span class="servings-value"><output class="servings-count">{d.servings}</output> {d.servingsLabel}</span>
+        <button type="button" class="servings-btn" data-step="1" aria-label="Mehr">+</button>
+        <button type="button" class="servings-reset" hidden>Zurücksetzen</button>
+      </div>
+      <label class="wake-lock" hidden><input type="checkbox" class="wake-lock-input" /> Bildschirm an</label>
+      <button type="button" class="checks-reset" hidden>Häkchen zurücksetzen</button>
+    </div>
+    <div class="recipe-body">
+      <Content />
+    </div>
+  </article>
+  <dialog class="lightbox"><img alt="" /></dialog>
+</Base>
