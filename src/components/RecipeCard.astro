@@ -21,6 +21,7 @@ const d = recipe.data;
       <div class="card-meta">
         {d.rating && <Stars rating={d.rating} />}
         {d.duration && <span>⏱ {d.duration} Min.</span>}
+        {d.rating && <span class="cooked">✓ Gekocht</span>}
       </div>
     </div>
   </a>
