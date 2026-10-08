@@ -1,6 +1,47 @@
 ---
 import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import type { RecipeSummary } from '../lib/filter';
+import { ingredientText } from '../lib/recipe-text';
+import { getRecipes } from '../lib/recipes';
+import { allTags } from '../lib/tags';
+import '../styles/overview.css';
+
+const recipes = await getRecipes();
+const tags = allTags(recipes.map((r) => r.data.tags));
+const summaries: RecipeSummary[] = recipes.map((r) => ({
+  id: r.id,
+  title: r.data.title,
+  tags: r.data.tags,
+  rating: r.data.rating ?? null,
+  duration: r.data.duration ?? null,
+  added: r.data.added.toISOString().slice(0, 10),
+  ingredients: ingredientText(r.body ?? ''),
+}));
+const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\u003c');
 ---
 <Base title="RecipeBook">
-  <p>Rezepte folgen.</p>
+  <section class="controls">
+    <div class="controls-row">
+      <input type="search" class="search" placeholder="Rezept oder Zutat suchen …" aria-label="Suche" />
+      <select class="sort" aria-label="Sortierung">
+        <option value="name">Name (A–Z)</option>
+        <option value="rating">Bewertung</option>
+        <option value="duration">Dauer</option>
+        <option value="added">Zuletzt hinzugefügt</option>
+      </select>
+    </div>
+    <div class="tag-filter">
+      {tags.map((t) => <button type="button" class="tag tag-chip" data-tag={t} aria-pressed="false">{t}</button>)}
+    </div>
+  </section>
+  <p class="result-count" aria-live="polite">{recipes.length} Rezepte</p>
+  <ul class="card-grid">
+    {recipes.map((r) => <RecipeCard recipe={r} />)}
+  </ul>
+  <p class="empty" hidden>Keine Rezepte gefunden.</p>
+  <script type="application/json" id="recipe-data" set:html={data} />
 </Base>
+<script>
+  import '../scripts/overview';
+</script>

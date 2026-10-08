@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import Placeholder from './Placeholder.astro';
+import Stars from './Stars.astro';
+import type { Recipe } from '../lib/recipes';
+import { recipeUrl } from '../lib/url';
+
+interface Props {
+  recipe: Recipe;
+}
+const { recipe } = Astro.props;
+const d = recipe.data;
+---
+<li class="card" data-id={recipe.id}>
+  <a href={recipeUrl(recipe.id)}>
+    <div class="card-image">
+      {d.cover ? <Image src={d.cover} alt="" widths={[400, 800]} sizes="(max-width: 600px) 100vw, 400px" /> : <Placeholder />}
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">{d.title}</h2>
+      <div class="card-meta">
+        {d.rating && <Stars rating={d.rating} />}
+        {d.duration && <span>⏱ {d.duration} Min.</span>}
+      </div>
+    </div>
+  </a>
+</li>
