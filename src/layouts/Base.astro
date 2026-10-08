@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+import { url } from '../lib/url';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+const { title, description = 'Meine Rezeptsammlung', image } = Astro.props;
+const pageTitle = title === 'RecipeBook' ? title : `${title} · RecipeBook`;
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <script is:inline>
+      try {
+        const t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href={url('')}>RecipeBook</a>
+      <button class="theme-toggle" type="button" aria-label="Hell/Dunkel umschalten">◐</button>
+    </header>
+    <main class="page">
+      <slot />
+    </main>
+    <script>
+      import '../scripts/theme';
+    </script>
+  </body>
+</html>
