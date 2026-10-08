@@ -13,7 +13,7 @@ function parseNumber(text: string): number {
   if (mixed) return Number(mixed[1]) + Number(mixed[2]) / Number(mixed[3]);
   const fraction = t.match(/^(\d+)\/(\d+)$/);
   if (fraction) return Number(fraction[1]) / Number(fraction[2]);
-  if (/^\d{1,3}\.\d{3}$/.test(t)) return Number(t.replace('.', ''));
+  if (/^[1-9]\d{0,2}\.\d{3}$/.test(t)) return Number(t.replace('.', ''));
   return Number(t.replace(',', '.'));
 }
 

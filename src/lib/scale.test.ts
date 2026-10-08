@@ -15,6 +15,7 @@ describe('parseQuantity', () => {
     ['4 Stück', { min: 4, max: null, unit: 'Stück' }],
     ['2 Bund', { min: 2, max: null, unit: 'Bund' }],
     ['1.000 g', { min: 1000, max: null, unit: 'g' }],
+    ['0.125 l', { min: 0.125, max: null, unit: 'l' }],
   ])('parses %s', (raw, expected) => {
     expect(parseQuantity(raw)).toEqual(expected);
   });
