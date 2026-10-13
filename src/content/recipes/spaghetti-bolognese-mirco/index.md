@@ -1,7 +1,7 @@
 ---
 title: Spaghetti Bolognese Mirco
 cover: ./cover.jpg
-tags: [Hauptspeise, Rind]
+tags: [Hauptspeise, Nudeln, Rind, Schwein]
 duration: 90
 rating: 5
 servings: 8
@@ -15,7 +15,7 @@ added: 2026-10-08
 - {{1 Bund}} Suppengrün (z. B. Möhre, Sellerie, Lauch), klein geschnitten
 - {{3–4}} Karotten, klein geschnitten
 - {{1 kg}} gemischtes Hackfleisch
-- Tomatenmark
+- {{2 EL}} Tomatenmark
 - Weißwein oder Rotwein (1 Schuss, zum Ablöschen)
 - {{800–1000 ml}} passierte Tomaten
 - {{500–1000 ml}} Gemüsebrühe

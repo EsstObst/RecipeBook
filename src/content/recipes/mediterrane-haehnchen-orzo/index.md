@@ -1,7 +1,7 @@
 ---
 title: Mediterrane Hähnchen-Orzo
 cover: ./cover.jpg
-tags: [Hähnchen, Hauptspeise, OnePot]
+tags: [Hähnchen, Hauptspeise, Nudeln, OnePot]
 duration: 60
 rating: 4
 servings: 4
@@ -28,8 +28,8 @@ added: 2026-10-08
 
 ## Zubereitung
 
-1. **Hähnchen anbraten:** Hähnchen mit Paprikapulver, Salz und Pfeffer würzen. In Bratolivenöl auf der Hautseite bei starker Hitze 3–4 Min. goldbraun anbraten, wenden und bei kleinerer Hitze gar ziehen lassen. Aus der Pfanne nehmen.
+1. **Hähnchen anbraten:** Hähnchen mit Paprikapulver, Salz und Pfeffer würzen. In Bratolivenöl auf der Hautseite bei starker Hitze 3–4 Min. goldbraun anbraten, wenden und bei kleinerer Hitze ca. 10 Min. gar ziehen lassen. Aus der Pfanne nehmen.
 2. **Gemüse andünsten:** In derselben Pfanne Zwiebeln, Knoblauch und Zucchini andünsten. Mit Salz, Pfeffer, Paprikapulver und Chiliflocken würzen.
-3. **Orzo garen:** Orzo zugeben und kurz anrösten. {{1 l}} Gemüsebrühe nach und nach unter ständigem Rühren zugießen, bis die Nudeln gar sind.
+3. **Orzo garen:** Orzo zugeben und kurz anrösten. {{1 l}} Gemüsebrühe nach und nach unter ständigem Rühren zugießen und ca. 10–12 Min. garen, bis die Nudeln gar sind. Bei Bedarf etwas mehr Brühe oder Wasser zugeben.
 4. **Soße fertigstellen:** Kirschtomaten, Babyspinat, Sahne, Zitronenabrieb und einen Schuss Zitronensaft unterrühren. Köcheln lassen, bis der Spinat zusammenfällt.
 5. **Servieren:** Hähnchen in Scheiben schneiden, zurück in die Pfanne geben und kurz erwärmen. Mit Parmesan und Petersilie bestreuen.

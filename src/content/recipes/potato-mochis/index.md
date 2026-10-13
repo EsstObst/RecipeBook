@@ -2,7 +2,7 @@
 title: Potato Mochis
 cover: ./cover.jpg
 tags: [Kartoffel, Snack]
-duration: 60
+duration: 180
 servings: 12
 servingsLabel: Stück
 source: Demon Slayer

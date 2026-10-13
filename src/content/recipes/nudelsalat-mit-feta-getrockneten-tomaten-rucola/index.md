@@ -1,7 +1,7 @@
 ---
 title: Nudelsalat mit Feta, getrockneten Tomaten & Rucola
 cover: ./cover.jpg
-tags: [Salat, Vegetarisch]
+tags: [Beilage, Nudeln, Salat, Vegetarisch]
 duration: 30
 rating: 5
 servings: 8

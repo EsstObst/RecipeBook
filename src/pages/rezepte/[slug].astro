@@ -5,6 +5,7 @@ import Base from '../../layouts/Base.astro';
 import Placeholder from '../../components/Placeholder.astro';
 import Stars from '../../components/Stars.astro';
 import { getRecipes, type Recipe } from '../../lib/recipes';
+import { ingredientLines, ingredientText, stepTexts } from '../../lib/recipe-text';
 import { servingsLabel } from '../../lib/servings-label';
 import { tagUrl, url } from '../../lib/url';
 import '../../styles/recipe.css';
@@ -20,9 +21,24 @@ const d = recipe.data;
 const sourceIsLink = d.source?.startsWith('http') ?? false;
 const ogImage = d.cover ? await getImage({ src: d.cover, width: 1200, format: 'jpeg' }) : null;
 const ogImageUrl = ogImage ? new URL(ogImage.src, Astro.site).href : new URL(url('icon-512.png'), Astro.site).href;
-const description = [d.duration ? `${d.duration} Min.` : null, ...d.tags].filter(Boolean).join(' · ') || undefined;
+const summary = [d.duration ? `${d.duration} Min.` : null, `${d.servings} ${servingsLabel(d.servings, d.servingsLabel)}`].filter(Boolean).join(', ');
+const ingredients = ingredientText(recipe.body ?? '');
+const description = `Rezept für ${d.title}: ${summary}.${ingredients ? ` Zutaten: ${ingredients}` : ''}`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: d.title,
+  image: ogImage ? [ogImageUrl] : undefined,
+  totalTime: d.duration ? `PT${d.duration}M` : undefined,
+  recipeYield: `${d.servings} ${servingsLabel(d.servings, d.servingsLabel)}`,
+  recipeCategory: d.tags.join(', ') || undefined,
+  recipeIngredient: ingredientLines(recipe.body ?? ''),
+  recipeInstructions: stepTexts(recipe.body ?? '').map((text) => ({ '@type': 'HowToStep', text })),
+  datePublished: d.added.toISOString().slice(0, 10),
+};
 ---
 <Base title={d.title} description={description} image={ogImageUrl}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings} data-servings-label={d.servingsLabel}>
     <div class="recipe-hero">
       {d.cover ? <Image src={d.cover} alt="" widths={[480, 960, 1600]} sizes="(min-width: 1232px) 1232px, 100vw" priority /> : <Placeholder />}
@@ -58,7 +74,7 @@ const description = [d.duration ? `${d.duration} Min.` : null, ...d.tags].filter
       <Content />
     </div>
   </article>
-  <dialog class="lightbox"><img alt="" /></dialog>
+  <dialog class="lightbox" aria-label="Bild vergrößert"></dialog>
 </Base>
 
 <script>

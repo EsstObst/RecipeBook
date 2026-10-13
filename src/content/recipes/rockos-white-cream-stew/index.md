@@ -3,7 +3,7 @@ title: Rockos White Cream Stew
 cover: ./cover.jpg
 tags: [Hähnchen, Hauptspeise]
 duration: 45
-servings: 4
+servings: 2
 servingsLabel: Portionen
 source: Pokémon-Kochbuch
 added: 2026-10-08
@@ -27,7 +27,8 @@ added: 2026-10-08
 
 ## Zubereitung
 
-1. **Hähnchen anbraten:** Hähnchenbrust in mundgerechte Stücke schneiden und in {{1 EL}} Mehl wenden. Öl in einer Pfanne erhitzen, das Fleisch darin goldbraun anbraten, herausnehmen und zur Seite stellen.
-2. **Zwiebel andünsten:** Zwiebel schälen und fein würfeln. Kartoffeln und Karotten schälen und würfeln. Butter in der Pfanne zerlassen und die Zwiebelwürfel darin bei mittlerer Hitze 2–3 Min. glasig andünsten.
-3. **Stew köcheln:** Die restlichen {{30 g}} Mehl zugeben, verrühren und mit Milch und Hühnerbrühe ablöschen. Hähnchen, Kartoffeln, Karotten und Lorbeerblatt zugeben. Bei mittlerer Hitze unter mehrmaligem Rühren 10–15 Min. köcheln lassen.
-4. **Fertigstellen und servieren:** Brokkoliröschen zugeben und bissfest garen. Vor dem Servieren das Lorbeerblatt entfernen und das Stew mit Salz und Pfeffer abschmecken.
+1. **Vorbereiten:** Hähnchenbrust in mundgerechte Stücke schneiden. Zwiebel schälen und fein würfeln. Kartoffeln und Karotten schälen und würfeln.
+2. **Hähnchen anbraten:** Hähnchen in {{1 EL}} Mehl wenden. Öl in einer Pfanne erhitzen, das Fleisch darin goldbraun anbraten, herausnehmen und zur Seite stellen.
+3. **Zwiebel andünsten:** Butter in der Pfanne zerlassen und die Zwiebelwürfel darin bei mittlerer Hitze 2–3 Min. glasig andünsten.
+4. **Stew köcheln:** Die restlichen {{30 g}} Mehl zugeben, verrühren und mit Milch und Hühnerbrühe ablöschen. Hähnchen, Kartoffeln, Karotten und Lorbeerblatt zugeben. Bei mittlerer Hitze unter mehrmaligem Rühren 10–15 Min. köcheln lassen.
+5. **Fertigstellen und servieren:** Brokkoliröschen zugeben und ca. 3–4 Min. bissfest garen. Vor dem Servieren das Lorbeerblatt entfernen und das Stew mit Salz und Pfeffer abschmecken.

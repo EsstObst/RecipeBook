@@ -1,10 +1,10 @@
 ---
 title: Nudelauflauf
 cover: ./cover.jpg
-tags: [Auflauf, Hauptspeise, Schwein]
+tags: [Auflauf, Hauptspeise, Nudeln, Schwein]
 duration: 50
 rating: 4
-servings: 3
+servings: 2
 source: https://emmikochteinfach.de/nudelauflauf/
 added: 2026-10-08
 ---

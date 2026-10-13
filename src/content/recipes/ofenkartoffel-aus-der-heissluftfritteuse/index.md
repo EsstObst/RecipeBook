@@ -1,7 +1,7 @@
 ---
 title: Ofenkartoffel aus der Heißluftfritteuse
 cover: ./cover.jpg
-tags: [Hauptspeise, Vegetarisch]
+tags: [Hauptspeise, Kartoffel, Vegetarisch]
 duration: 45
 rating: 3
 servings: 2

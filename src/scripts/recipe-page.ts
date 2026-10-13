@@ -164,13 +164,23 @@ function initWakeLock(article: HTMLElement): void {
 
 function initLightbox(article: HTMLElement): void {
   const dialog = document.querySelector<HTMLDialogElement>('.lightbox');
-  const big = dialog?.querySelector('img');
-  if (!dialog || !big) return;
+  if (!dialog) return;
+  const big = dialog.appendChild(document.createElement('img'));
   for (const img of article.querySelectorAll<HTMLImageElement>('.recipe-body img')) {
-    img.addEventListener('click', () => {
-      big.src = img.currentSrc || img.src;
+    const open = (): void => {
+      // Größte Variante aus dem srcset, nicht die für die kleine Ansicht geladene.
+      big.src = img.srcset.split(',').at(-1)?.trim().split(' ')[0] || img.currentSrc || img.src;
       big.alt = img.alt;
       dialog.showModal();
+    };
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.addEventListener('click', open);
+    img.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      event.stopPropagation();
+      open();
     });
   }
   dialog.addEventListener('click', () => dialog.close());
