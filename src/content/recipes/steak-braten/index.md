@@ -25,7 +25,7 @@ added: 2026-10-08
 
 ## Zubereitung
 
-1. **Vorbereiten:** Steak 45–60 Min. vor dem Braten aus dem Kühlschrank nehmen und sehr gut trocken tupfen.
+1. **Vorbereiten:** Steak 15–30 Min. vor dem Braten aus dem Kühlschrank nehmen und sehr gut trocken tupfen.
 2. **Pfanne vorheizen:** Pfanne stark erhitzen, Öl hineingeben und das Steak einlegen.
 3. **Anbraten:** Steak insgesamt 4 Min. braten und dabei jede Minute wenden. Zu Beginn der letzten Minute die Pfanne bereits von der Platte nehmen.
 4. **Mit Butter übergießen:** Butter, Knoblauch und Thymian in die Pfanne geben. Steak immer wieder mit der schäumenden Butter übergießen.
