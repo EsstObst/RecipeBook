@@ -11,7 +11,7 @@ added: 2026-10-08
 
 ## Zutaten
 
-- {{4 Stück}} Pollo-Fino (Hähnchenschenkel, entbeint)
+- {{4}} Pollo-Fino (Hähnchenschenkel, entbeint)
 - {{2}} Zwiebeln, gewürfelt
 - {{4}} Knoblauchzehen, fein gehackt
 - {{2}} Zucchini, gewürfelt

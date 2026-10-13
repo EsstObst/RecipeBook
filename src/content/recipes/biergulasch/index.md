@@ -4,7 +4,7 @@ cover: ./cover.jpg
 tags: [Hauptspeise, Schwein]
 duration: 120
 servings: 4
-source: Zutaten aus Screenshot, Zubereitung ergänzt
+source: Screenshot
 added: 2026-10-08
 ---
 
@@ -35,7 +35,7 @@ added: 2026-10-08
 2. **Fleisch anbraten:** Butterschmalz im Bräter stark erhitzen. Fleisch portionsweise rundum kräftig anbraten und herausnehmen. *(Nicht zu viel auf einmal, sonst kocht das Fleisch statt zu bräunen.)*
 3. **Gemüse anrösten:** Zwiebel und Karotte im Bratfett ca. 4 Min. anbraten, Knoblauch zugeben und 1 Min. mitbraten. Tomatenmark einrühren und 1–2 Min. mitrösten.
 4. **Ablöschen:** Mit Bier ablöschen, den Bratsatz vom Boden lösen und ca. 2 Min. einkochen lassen. Fleisch samt Saft zurückgeben, Gemüsebrühe angießen. Senf, Salz, Pfeffer und Paprikapulver einrühren.
-5. **Schmoren:** Zugedeckt bei kleiner Hitze ca. 1 ½ Std. schmoren lassen, bis das Fleisch zart ist. Gelegentlich umrühren.
+5. **Schmoren:** Zugedeckt bei kleiner Hitze ca. 1,5 Std. schmoren lassen, bis das Fleisch zart ist. Gelegentlich umrühren.
 6. **Binden und verfeinern:** Saucenbinder einrühren und kurz aufkochen lassen. Hitze reduzieren, Crème fraîche unterrühren und abschmecken.
 7. **Servieren:** Mit Spätzle, Semmelknödeln oder Salzkartoffeln servieren.
 

@@ -15,7 +15,7 @@ added: 2026-10-08
 - {{1–2 TL}} neutrales Öl mit hohem Rauchpunkt (z. B. Raps)
 - {{1 EL}} Butter
 - {{1–2}} Knoblauchzehen, angedrückt
-- {{1–2}} Zweige Thymian (optional zusätzlich Rosmarin)
+- {{1–2 Zweige}} Thymian (optional zusätzlich Rosmarin)
 - Salz (am besten grob/Meersalz), Pfeffer
 
 ## Equipment

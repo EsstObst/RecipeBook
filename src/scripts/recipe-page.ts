@@ -77,11 +77,16 @@ function initChecklist(article: HTMLElement): void {
     item.dataset.checkId = String(index);
     item.classList.add('checkable');
     item.tabIndex = 0;
+    item.setAttribute('role', 'checkbox');
   });
   checked = new Set([...checked].filter((id) => Number(id) < items.length));
 
   function render(): void {
-    for (const item of items) item.classList.toggle('is-checked', checked.has(item.dataset.checkId!));
+    for (const item of items) {
+      const isChecked = checked.has(item.dataset.checkId!);
+      item.classList.toggle('is-checked', isChecked);
+      item.setAttribute('aria-checked', String(isChecked));
+    }
     reset.hidden = checked.size === 0;
     writeStorage(key, checked.size === 0 ? null : serializeChecked(checked));
   }

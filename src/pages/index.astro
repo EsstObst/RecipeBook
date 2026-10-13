@@ -23,6 +23,7 @@ const summaries: RecipeSummary[] = recipes.map((r) => ({
 const data = JSON.stringify({ recipes: summaries, tags }).replace(/</g, '\\u003c');
 ---
 <Base title="RecipeBook" image={new URL(url('icon-512.png'), Astro.site).href}>
+  <h1 class="visually-hidden">Rezepte</h1>
   <section class="controls">
     <div class="controls-row">
       <input type="search" class="search" placeholder="Rezept oder Zutat suchen …" aria-label="Suche" />

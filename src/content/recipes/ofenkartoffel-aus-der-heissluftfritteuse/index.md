@@ -15,6 +15,10 @@ added: 2026-10-08
 - Toppings nach Wunsch (z. B. Kräuterquark, Sour Cream, Käse, Frühlingszwiebeln)
 - Öl (zum Einsprühen), Salz, Gewürze
 
+## Equipment
+
+- Heißluftfritteuse
+
 ## Zubereitung
 
 1. **Kartoffeln vorbereiten:** Kartoffeln gründlich waschen und trocken reiben. Mit einer Gabel 6–8× einstechen.

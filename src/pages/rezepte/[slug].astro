@@ -25,7 +25,7 @@ const description = [d.duration ? `${d.duration} Min.` : null, ...d.tags].filter
 <Base title={d.title} description={description} image={ogImageUrl}>
   <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings} data-servings-label={d.servingsLabel}>
     <div class="recipe-hero">
-      {d.cover ? <Image src={d.cover} alt={d.title} widths={[480, 960, 1600]} sizes="100vw" loading="eager" /> : <Placeholder />}
+      {d.cover ? <Image src={d.cover} alt="" widths={[480, 960, 1600]} sizes="(min-width: 1232px) 1232px, 100vw" priority /> : <Placeholder />}
     </div>
     <header class="recipe-header">
       <h1>{d.title}</h1>
@@ -46,9 +46,9 @@ const description = [d.duration ? `${d.duration} Min.` : null, ...d.tags].filter
     </header>
     <div class="recipe-toolbar">
       <div class="servings" role="group" aria-label="Portionen">
-        <button type="button" class="servings-btn" data-step="-1" aria-label="Weniger">−</button>
+        <button type="button" class="servings-btn" data-step="-1" aria-label="Eine Portion weniger">−</button>
         <span class="servings-value"><output class="servings-count">{d.servings}</output> <span class="servings-label">{servingsLabel(d.servings, d.servingsLabel)}</span></span>
-        <button type="button" class="servings-btn" data-step="1" aria-label="Mehr">+</button>
+        <button type="button" class="servings-btn" data-step="1" aria-label="Eine Portion mehr">+</button>
         <button type="button" class="servings-reset" hidden>Zurücksetzen</button>
       </div>
       <label class="wake-lock" hidden><input type="checkbox" class="wake-lock-input" autocomplete="off" /> Bildschirm an</label>
