@@ -23,6 +23,8 @@ Eingaben können sein: URL, PDF, Screenshot/Foto eines Rezepts, kopierter Text, 
 7. **Plausi-Check** (bei jedem neuen oder geänderten Rezept): Mengen pro Portion realistisch? Fehlen Mengen, die man zum Kochen braucht (z. B. Wasser für Reis, Nudelmenge)? Wird jede Zutat verwendet und jede verwendete Zutat aufgeführt? Garzeiten, Temperaturen und Reihenfolge stimmig? Passen Tags und Dauer? Reine Stilfehler direkt korrigieren; inhaltliche Verbesserungsvorschläge dem Nutzer kurz auflisten und erst nach seinem OK umsetzen.
 8. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://esstobst.github.io/RecipeBook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
 
+**Inbox:** Neue Fotos/Dateien legt der Nutzer in `import/` (nicht im Git). Was dort direkt liegt, ist unverarbeitet. Nach dem Verarbeiten das Original nach `import/archiv/` verschieben (sprechender Dateiname), nie löschen.
+
 Gekocht melden („Hab X gekocht, 4 Sterne“): `rating` setzen, bauen, pushen. Ein Rezept gilt als gekocht, sobald es Sterne hat (Filter „Noch nicht gekocht“). Ohne Sternangabe nachfragen.
 
 Bild nachreichen („Hier ist das Bild für …“): `npm run image` in den Rezeptordner, `cover: ./cover.jpg` in der Frontmatter ergänzen bzw. Bild unter den Schritt setzen, bauen, pushen.
