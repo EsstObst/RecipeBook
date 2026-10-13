@@ -5,6 +5,7 @@ import Base from '../../layouts/Base.astro';
 import Placeholder from '../../components/Placeholder.astro';
 import Stars from '../../components/Stars.astro';
 import { getRecipes, type Recipe } from '../../lib/recipes';
+import { servingsLabel } from '../../lib/servings-label';
 import { tagUrl, url } from '../../lib/url';
 import '../../styles/recipe.css';
 
@@ -22,7 +23,7 @@ const ogImageUrl = ogImage ? new URL(ogImage.src, Astro.site).href : new URL(url
 const description = [d.duration ? `${d.duration} Min.` : null, ...d.tags].filter(Boolean).join(' · ') || undefined;
 ---
 <Base title={d.title} description={description} image={ogImageUrl}>
-  <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings}>
+  <article class="recipe" data-recipe-id={recipe.id} data-servings={d.servings} data-servings-label={d.servingsLabel}>
     <div class="recipe-hero">
       {d.cover ? <Image src={d.cover} alt={d.title} widths={[480, 960, 1600]} sizes="100vw" loading="eager" /> : <Placeholder />}
     </div>
@@ -46,7 +47,7 @@ const description = [d.duration ? `${d.duration} Min.` : null, ...d.tags].filter
     <div class="recipe-toolbar">
       <div class="servings" role="group" aria-label="Portionen">
         <button type="button" class="servings-btn" data-step="-1" aria-label="Weniger">−</button>
-        <span class="servings-value"><output class="servings-count">{d.servings}</output> {d.servingsLabel}</span>
+        <span class="servings-value"><output class="servings-count">{d.servings}</output> <span class="servings-label">{servingsLabel(d.servings, d.servingsLabel)}</span></span>
         <button type="button" class="servings-btn" data-step="1" aria-label="Mehr">+</button>
         <button type="button" class="servings-reset" hidden>Zurücksetzen</button>
       </div>

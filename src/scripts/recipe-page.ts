@@ -1,5 +1,6 @@
 import { parseChecked, serializeChecked } from '../lib/checklist';
 import { formatQuantity, scaleQuantity, type Quantity } from '../lib/scale';
+import { servingsLabel } from '../lib/servings-label';
 
 const CHECKABLE = '.recipe-section--zutaten li, .recipe-section--zubereitung ol > li';
 
@@ -23,6 +24,8 @@ function writeStorage(key: string, value: string | null): void {
 function initServings(article: HTMLElement): void {
   const original = Number(article.dataset.servings);
   const count = article.querySelector<HTMLElement>('.servings-count')!;
+  const label = article.querySelector<HTMLElement>('.servings-label')!;
+  const labelText = article.dataset.servingsLabel ?? '';
   const reset = article.querySelector<HTMLButtonElement>('.servings-reset')!;
   const buttons = [...article.querySelectorAll<HTMLButtonElement>('.servings-btn')];
   const quantities = [...article.querySelectorAll<HTMLElement>('.recipe-body .qty')].map((el) => ({
@@ -38,6 +41,7 @@ function initServings(article: HTMLElement): void {
 
   function apply(): void {
     count.textContent = String(current);
+    label.textContent = servingsLabel(current, labelText);
     for (const button of buttons) {
       const step = Number(button.dataset.step);
       button.disabled = (step < 0 && current <= 1) || (step > 0 && current >= 99);
