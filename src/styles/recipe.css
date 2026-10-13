@@ -63,11 +63,13 @@
 .recipe-body li { margin: 0.35rem 0; }
 .recipe-section--zubereitung ol > li { margin: 0.9rem 0; }
 .recipe-body li img {
-  display: inline-block;
-  max-width: min(100%, 22rem);
-  margin: 0.6rem 0.5rem 0 0;
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin: 0.75rem 0 0.25rem;
   border-radius: var(--radius);
-  vertical-align: top;
   cursor: zoom-in;
 }
 .checkable { cursor: pointer; }
