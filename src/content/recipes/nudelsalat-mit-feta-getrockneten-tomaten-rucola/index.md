@@ -5,6 +5,7 @@ tags: [Beilage, Nudeln, Salat, Vegetarisch]
 duration: 30
 rating: 5
 servings: 8
+nutrition: { kcal: 465, protein: 18, carbs: 52, fat: 20 }  # pro Portion, geschätzt
 source: Janita
 added: 2026-10-08
 ---

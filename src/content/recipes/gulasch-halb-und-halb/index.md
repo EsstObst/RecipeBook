@@ -3,6 +3,7 @@ title: Gulasch Halb und Halb
 tags: [Hauptspeise, Nudeln, Rind, Schwein]
 duration: 120
 servings: 4
+nutrition: { kcal: 765, protein: 67, carbs: 79, fat: 20 }  # pro Portion, geschätzt
 source: https://youtu.be/GhAVFykFGS0
 added: 2026-10-16
 ---

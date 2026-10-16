@@ -5,6 +5,7 @@ tags: [Beilage, Schwein]
 duration: 25
 rating: 5
 servings: 3
+nutrition: { kcal: 220, protein: 11, carbs: 13, fat: 12 }  # pro Portion, geschätzt
 source: Papa
 added: 2026-10-13
 ---

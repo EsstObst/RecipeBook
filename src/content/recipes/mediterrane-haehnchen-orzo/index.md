@@ -5,6 +5,7 @@ tags: [Hähnchen, Hauptspeise, Nudeln, OnePot]
 duration: 60
 rating: 4
 servings: 4
+nutrition: { kcal: 1200, protein: 60, carbs: 105, fat: 58 }  # pro Portion, geschätzt
 source: TikTok
 added: 2026-10-08
 ---

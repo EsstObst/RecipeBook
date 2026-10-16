@@ -4,6 +4,7 @@ cover: ./cover.jpg
 tags: [Beilage, Vegetarisch]
 duration: 100
 servings: 4
+nutrition: { kcal: 205, protein: 5, carbs: 14, fat: 13 }  # pro Portion, geschätzt
 added: 2026-10-16
 ---
 

@@ -4,6 +4,7 @@ cover: ./cover.jpg
 tags: [Hauptspeise, Schwein]
 duration: 120
 servings: 4
+nutrition: { kcal: 490, protein: 38, carbs: 9, fat: 32 }  # pro Portion, geschätzt
 source: Screenshot
 added: 2026-10-08
 ---

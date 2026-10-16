@@ -6,7 +6,7 @@ import Placeholder from '../../components/Placeholder.astro';
 import Stars from '../../components/Stars.astro';
 import { getRecipes, type Recipe } from '../../lib/recipes';
 import { ingredientLines, ingredientText, stepTexts } from '../../lib/recipe-text';
-import { servingsLabel } from '../../lib/servings-label';
+import { perServingLabel, servingsLabel } from '../../lib/servings-label';
 import { tagUrl, url } from '../../lib/url';
 import '../../styles/recipe.css';
 
@@ -24,6 +24,12 @@ const ogImageUrl = ogImage ? new URL(ogImage.src, Astro.site).href : new URL(url
 const summary = [d.duration ? `${d.duration} Min.` : null, `${d.servings} ${servingsLabel(d.servings, d.servingsLabel)}`].filter(Boolean).join(', ');
 const ingredients = ingredientText(recipe.body ?? '');
 const description = `Rezept für ${d.title}: ${summary}.${ingredients ? ` Zutaten: ${ingredients}` : ''}`;
+const nutrition = [
+  { label: 'kcal', value: `${d.nutrition.kcal}` },
+  { label: 'Eiweiß', value: `${d.nutrition.protein} g` },
+  { label: 'Kohlenhydrate', value: `${d.nutrition.carbs} g` },
+  { label: 'Fett', value: `${d.nutrition.fat} g` },
+];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Recipe',
@@ -34,6 +40,14 @@ const jsonLd = {
   recipeCategory: d.tags.join(', ') || undefined,
   recipeIngredient: ingredientLines(recipe.body ?? ''),
   recipeInstructions: stepTexts(recipe.body ?? '').map((text) => ({ '@type': 'HowToStep', text })),
+  nutrition: {
+    '@type': 'NutritionInformation',
+    servingSize: `1 ${perServingLabel(d.servingsLabel)}`,
+    calories: `${d.nutrition.kcal} kcal`,
+    proteinContent: `${d.nutrition.protein} g`,
+    carbohydrateContent: `${d.nutrition.carbs} g`,
+    fatContent: `${d.nutrition.fat} g`,
+  },
   datePublished: d.added.toISOString().slice(0, 10),
 };
 ---
@@ -59,6 +73,12 @@ const jsonLd = {
       <ul class="tag-list">
         {d.tags.map((t) => <li><a class="tag" href={tagUrl(t)}>{t}</a></li>)}
       </ul>
+      <section class="nutrition" aria-label="Nährwerte">
+        <p class="nutrition-title">Nährwerte pro {perServingLabel(d.servingsLabel)} <span class="nutrition-hint">(ca., geschätzt)</span></p>
+        <dl class="nutrition-list">
+          {nutrition.map((n) => <div><dt>{n.label}</dt><dd>{n.value}</dd></div>)}
+        </dl>
+      </section>
     </header>
     <div class="recipe-toolbar">
       <div class="servings" role="group" aria-label="Portionen">

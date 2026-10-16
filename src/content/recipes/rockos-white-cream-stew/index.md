@@ -5,6 +5,7 @@ tags: [Hähnchen, Hauptspeise]
 duration: 45
 servings: 2
 servingsLabel: Portionen
+nutrition: { kcal: 610, protein: 40, carbs: 55, fat: 23 }  # pro Portion, geschätzt
 source: Pokémon-Kochbuch
 added: 2026-10-08
 ---

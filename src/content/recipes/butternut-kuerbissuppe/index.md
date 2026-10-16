@@ -5,6 +5,7 @@ tags: [Suppe, Vegetarisch]
 duration: 40
 rating: 4
 servings: 4
+nutrition: { kcal: 400, protein: 6, carbs: 36, fat: 26 }  # pro Portion, geschätzt
 source: https://www.einfachkochen.de/rezepte/butternut-kuerbissuppe-einfach-so-cremig
 added: 2026-10-13
 ---

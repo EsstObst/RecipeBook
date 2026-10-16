@@ -19,6 +19,28 @@
   margin: 0 0 0.75rem;
   color: var(--muted);
 }
+.nutrition { margin: 1rem 0 0; }
+.nutrition-title { margin: 0 0 0.4rem; font-weight: 600; }
+.nutrition-hint { font-weight: 400; color: var(--muted); font-size: 0.9em; }
+.nutrition-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  max-width: 32rem;
+}
+@media (max-width: 419px) {
+  .nutrition-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.nutrition-list div {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  text-align: center;
+}
+.nutrition-list dt { font-size: 0.75rem; color: var(--muted); }
+.nutrition-list dd { margin: 0; font-weight: 600; }
 .recipe-toolbar {
   position: sticky;
   top: 0;

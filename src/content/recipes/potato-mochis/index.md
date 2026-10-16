@@ -5,6 +5,7 @@ tags: [Kartoffel, Snack]
 duration: 180
 servings: 12
 servingsLabel: Stück
+nutrition: { kcal: 95, protein: 3, carbs: 12, fat: 3 }  # pro Stück, geschätzt
 source: Demon Slayer
 added: 2026-10-08
 ---

@@ -23,8 +23,8 @@ Eingaben können sein: URL, PDF, Screenshot/Foto eines Rezepts, kopierter Text, 
 3. Ordner `src/content/recipes/<slug>/` anlegen. Slug = Titel in Kleinbuchstaben, `ä→ae ö→oe ü→ue ß→ss`, alles andere außer a–z/0–9 → `-`, keine doppelten/führenden/abschließenden `-`.
 4. Fotos: `npm run image -- "<foto>" src/content/recipes/<slug>/cover.jpg`; Schrittbilder als `schritt-<N>.jpg` (bei mehreren `schritt-<N>-2.jpg`). Ohne Angabe des Nutzers ist das erste Foto das Cover.
 5. `index.md` nach Format und Stilrichtlinie unten schreiben. `added` = heutiges Datum.
-6. Fehlende Dauer schätzen und dem Nutzer sagen. Inhaltliche Unklarheiten (fehlende Zutaten, widersprüchliche Mengen, fehlende Portionszahl) nachfragen, nicht raten.
-7. **Plausi-Check** (bei jedem neuen oder geänderten Rezept): Mengen pro Portion realistisch? Fehlen Mengen, die man zum Kochen braucht (z. B. Wasser für Reis, Nudelmenge)? Wird jede Zutat verwendet und jede verwendete Zutat aufgeführt? Garzeiten, Temperaturen und Reihenfolge stimmig? Passen Tags und Dauer? Reine Stilfehler direkt korrigieren; inhaltliche Verbesserungsvorschläge dem Nutzer kurz auflisten und erst nach seinem OK umsetzen.
+6. Nährwerte pro Portion (bzw. pro Stück) schätzen und als `nutrition` eintragen: aus den Zutatenmengen kcal, Eiweiß, Kohlenhydrate, Fett (ganze Zahlen, Gramm) überschlagen; Beilagen, die im Rezept stehen, zählen mit, optionale Toppings nicht. Fehlende Dauer schätzen und dem Nutzer sagen. Inhaltliche Unklarheiten (fehlende Zutaten, widersprüchliche Mengen, fehlende Portionszahl) nachfragen, nicht raten.
+7. **Plausi-Check** (bei jedem neuen oder geänderten Rezept): Mengen pro Portion realistisch? Fehlen Mengen, die man zum Kochen braucht (z. B. Wasser für Reis, Nudelmenge)? Wird jede Zutat verwendet und jede verwendete Zutat aufgeführt? Garzeiten, Temperaturen und Reihenfolge stimmig? Passen Tags, Dauer und Nährwerte (auch nach Mengenänderungen neu schätzen)? Reine Stilfehler direkt korrigieren; inhaltliche Verbesserungsvorschläge dem Nutzer kurz auflisten und erst nach seinem OK umsetzen.
 8. `npm test && npm run build`, dann committen und pushen. Dem Nutzer den Link `https://esstobst.github.io/RecipeBook/rezepte/<slug>/` nennen (ca. 2 Min. bis live).
 
 **Inbox:** Neue Fotos/Dateien legt der Nutzer in `import/` (nicht im Git). Was dort direkt liegt, ist unverarbeitet. Nach dem Verarbeiten das Original nach `import/archiv/` verschieben (sprechender Dateiname), nie löschen.
@@ -44,6 +44,7 @@ duration: 60                  # Minuten, optional aber immer setzen
 rating: 4                     # 1–5, optional (nur der Nutzer vergibt Sterne; Rezept mit Sternen = schon gekocht)
 servings: 4
 servingsLabel: Stück          # optional, Standard „Personen“
+nutrition: { kcal: 650, protein: 40, carbs: 70, fat: 22 }  # Pflicht; pro Portion bzw. Stück, von Claude geschätzt
 source: TikTok                # optional; URLs vollständig
 added: 2026-10-08
 ---

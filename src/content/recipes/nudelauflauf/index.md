@@ -5,6 +5,7 @@ tags: [Auflauf, Hauptspeise, Nudeln, Schwein]
 duration: 50
 rating: 4
 servings: 2
+nutrition: { kcal: 1110, protein: 50, carbs: 106, fat: 54 }  # pro Portion, geschätzt
 source: https://emmikochteinfach.de/nudelauflauf/
 added: 2026-10-08
 ---

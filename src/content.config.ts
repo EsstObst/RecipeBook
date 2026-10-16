@@ -24,6 +24,14 @@ const recipes = defineCollection({
         cover: image().optional(),
         duration: z.number().int().positive().optional(),
         rating: z.number().int().min(1).max(5).optional(),
+        nutrition: z
+          .object({
+            kcal: z.number().int().positive(),
+            protein: z.number().int().min(0),
+            carbs: z.number().int().min(0),
+            fat: z.number().int().min(0),
+          })
+          .strict(),
         source: z
           .string()
           .min(1)

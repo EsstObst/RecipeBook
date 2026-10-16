@@ -5,6 +5,7 @@ tags: [Schwein, Suppe]
 duration: 90
 rating: 5
 servings: 8
+nutrition: { kcal: 555, protein: 29, carbs: 24, fat: 37 }  # pro Portion, geschätzt
 source: https://www.youtube.com/watch?v=e5MVXmBco_o
 added: 2026-10-08
 ---

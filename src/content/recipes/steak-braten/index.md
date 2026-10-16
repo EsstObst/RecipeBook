@@ -5,6 +5,7 @@ tags: [Hauptspeise, Rind]
 duration: 15
 rating: 5
 servings: 1
+nutrition: { kcal: 800, protein: 73, carbs: 1, fat: 55 }  # pro Portion, geschätzt
 source: Eigenes Rezept
 added: 2026-10-08
 ---

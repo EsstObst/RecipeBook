@@ -5,6 +5,7 @@ tags: [Hauptspeise, Nudeln, Rind, Schwein]
 duration: 90
 rating: 5
 servings: 8
+nutrition: { kcal: 880, protein: 44, carbs: 101, fat: 32 }  # pro Portion, geschätzt
 source: Mirco
 added: 2026-10-08
 ---

@@ -5,6 +5,7 @@ tags: [HelloFresh, Hauptspeise, Vegetarisch]
 duration: 30
 rating: 4
 servings: 3
+nutrition: { kcal: 710, protein: 21, carbs: 85, fat: 30 }  # pro Portion, geschätzt
 source: HelloFresh
 added: 2026-10-08
 ---
