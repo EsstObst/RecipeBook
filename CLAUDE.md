@@ -3,6 +3,10 @@
 Statische Rezept-Website (Astro 5, GitHub Pages). Live: https://esstobst.github.io/RecipeBook/
 Sprache mit dem Nutzer: Deutsch. Jeder Push auf `main` geht sofort live – Commits und Pushes macht Claude selbstständig, aber erst wenn `npm test` und `npm run build` lokal grün sind.
 
+**Git-Workflow (gilt überall, auch in Cloud-/Handy-Sitzungen):** Immer direkt auf `main` committen und pushen – keine eigenen Branches, keine Pull Requests. Startet die Sitzung auf einem anderen Branch (z. B. `claude/…`), die Änderungen nach `main` übernehmen (`git checkout main && git pull`, dann committen bzw. den Branch fast-forward mergen) und `main` pushen. Schlägt der Push auf `main` fehl (z. B. fehlende Berechtigung), dem Nutzer das sofort sagen statt still einen PR anzulegen.
+
+**Cloud-/Handy-Sitzungen:** Den Ordner `import/` gibt es dort nicht. Fotos und Screenshots kommen als Anhang im Chat; zum Verarbeiten zuerst in eine temporäre Datei außerhalb des Repos speichern und dann `npm run image` darauf anwenden. Vor `npm test` ggf. `npm ci` ausführen.
+
 ## Befehle
 
 - `npm run dev` – lokale Vorschau unter http://localhost:4321/RecipeBook/
