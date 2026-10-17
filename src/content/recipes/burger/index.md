@@ -4,6 +4,7 @@ cover: ./cover.jpg
 tags: [Hauptspeise, Rind]
 duration: 20
 servings: 2
+nutrition: { kcal: 950, protein: 40, carbs: 55, fat: 62 }  # pro Portion, geschätzt
 source: Eigenes Rezept
 added: 2026-10-17
 ---

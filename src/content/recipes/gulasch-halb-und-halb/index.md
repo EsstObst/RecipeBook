@@ -1,5 +1,6 @@
 ---
 title: Gulasch Halb und Halb
+cover: ./cover.jpg
 tags: [Hauptspeise, Nudeln, Rind, Schwein]
 duration: 120
 servings: 4
