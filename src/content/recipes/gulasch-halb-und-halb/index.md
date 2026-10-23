@@ -4,7 +4,7 @@ cover: ./cover.jpg
 tags: [Hauptspeise, Nudeln, Rind, Schwein]
 duration: 120
 servings: 4
-nutrition: { kcal: 765, protein: 67, carbs: 79, fat: 20 }  # pro Portion, geschätzt
+nutrition: { kcal: 800, protein: 68, carbs: 86, fat: 20 }  # pro Portion, geschätzt
 source: https://youtu.be/GhAVFykFGS0
 added: 2026-10-16
 ---
@@ -16,6 +16,7 @@ added: 2026-10-16
 - {{500 g}} Schweinekeule, gewürfelt
 - {{1–2}} Knoblauchzehen, grob gehackt
 - {{400 g}} Zwiebeln, grob geschnitten
+- {{3}} rote Paprika, in Stücke geschnitten
 - {{1,5 EL}} Paprikapulver
 - {{1,5 EL}} Tomatenmark
 - Abrieb von {{1/2}} Bio-Zitrone
@@ -33,10 +34,11 @@ added: 2026-10-16
 
 ## Zubereitung
 
-1. **Vorbereiten:** Fleisch in mundgerechte Würfel schneiden. Zwiebeln und Knoblauch grob schneiden.
+1. **Vorbereiten:** Fleisch in mundgerechte Würfel schneiden. Zwiebeln und Knoblauch grob schneiden, Paprika entkernen und in Stücke schneiden.
 2. **Fleisch anbraten:** Öl im Bräter stark erhitzen und das Fleisch darin kräftig anbraten, bis es eine gute Farbe hat.
-3. **Zwiebeln anschwitzen:** Erst den Knoblauch, dann die Zwiebeln zugeben und alles zusammen kräftig anschwitzen. Mit Salz und Pfeffer würzen.
+3. **Gemüse anschwitzen:** Erst den Knoblauch, dann Zwiebeln und Paprika zugeben und alles zusammen kräftig anschwitzen. Mit Salz und Pfeffer würzen.
 4. **Würzen:** Paprikapulver, Tomatenmark und Zitronenabrieb zugeben und kurz mit anschwitzen.
 5. **Schmoren:** Mit so viel Wasser auffüllen, dass alles bedeckt ist (ca. {{750 ml}}). Zugedeckt bei mittlerer Hitze mind. 1,5 Std. schmoren lassen, bis das Fleisch zart ist.
+   ![Gulasch im Topf](./schritt-5.jpg)
 6. **Nudeln kochen:** Gegen Ende der Schmorzeit die Bandnudeln in reichlich Salzwasser nach Packungsangabe bissfest kochen und abgießen.
 7. **Servieren:** Gulasch mit Salz und Pfeffer abschmecken und mit den Bandnudeln servieren.
