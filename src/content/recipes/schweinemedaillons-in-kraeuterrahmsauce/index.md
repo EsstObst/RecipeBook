@@ -16,7 +16,7 @@ added: 2026-10-27
 - {{2}} Zwiebeln, gewürfelt
 - {{2}} Knoblauchzehen, fein gehackt
 - {{75 g}} Speck, gewürfelt (optional)
-- {{200 ml}} Brühe
+- {{200 ml}} Gemüsebrühe
 - {{300 g}} Kräuter-Crème-fraîche
 - {{2–3 EL}} Kräuter, gehackt (frisch aus dem Garten oder TK-8-Kräuter)
 - Öl, Salz, Pfeffer
@@ -29,7 +29,7 @@ added: 2026-10-27
 
 1. **Medaillons anbraten:** Öl in der Pfanne stark erhitzen und die Medaillons von beiden Seiten scharf anbraten. Aus der Pfanne nehmen und beiseitestellen.
 2. **Zwiebeln und Speck anbraten:** In derselben Pfanne Zwiebeln, Knoblauch und nach Belieben Speck bei mittlerer Hitze anbraten, bis die Zwiebeln glasig sind.
-3. **Sauce ansetzen:** Brühe und Kräuter-Crème-fraîche dazugeben und verrühren. Mit Salz, Pfeffer und den Kräutern würzen.
+3. **Sauce ansetzen:** Gemüsebrühe und Kräuter-Crème-fraîche dazugeben und verrühren. Mit Salz, Pfeffer und den Kräutern würzen.
 4. **Köcheln lassen:** Medaillons mit dem ausgetretenen Fleischsaft zurück in die Pfanne geben und ca. 10 Min. leise köcheln lassen. Ist die Sauce zu flüssig, ohne Deckel köcheln, sonst mit Deckel.
 5. **Servieren:** Abschmecken und mit der Sauce servieren.
 
