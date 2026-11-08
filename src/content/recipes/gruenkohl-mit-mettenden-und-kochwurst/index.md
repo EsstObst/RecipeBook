@@ -1,5 +1,6 @@
 ---
 title: Grünkohl mit Mettenden und Kochwurst
+cover: ./cover.jpg
 tags: [Hauptspeise, Kartoffel, Schwein]
 duration: 75
 servings: 4
@@ -36,6 +37,7 @@ added: 2026-10-27
 1. **Zwiebeln anschwitzen:** Schmalz im Topf erhitzen und die Zwiebeln bei mittlerer Hitze ca. 5 Min. glasig dünsten.
 2. **Würste anbraten:** Wurstscheiben dazugeben und ca. 5 Min. mitbraten, bis sie leicht Farbe bekommen.
 3. **Grünkohl dazugeben:** Gefrorenen Grünkohl und Gemüsebrühe dazugeben, mit Salz, Pfeffer und 1 Prise Zucker würzen. Mit Deckel ca. 10 Min. erhitzen und dabei öfter umrühren, bis der Kohl aufgetaut ist.
+   ![Grünkohl mit Würsten im Topf](./schritt-3.jpg)
 4. **Schmoren:** Mit Deckel bei kleiner Hitze ca. 35 Min. schmoren und gelegentlich umrühren. Wird es zu trocken, etwas Brühe nachgießen.
 5. **Kartoffeln kochen:** Währenddessen Kartoffeln schälen, halbieren und in Salzwasser ca. 20 Min. garen. Abgießen, kurz ausdampfen lassen und in der Butter schwenken.
 6. **Binden:** Haferflocken unter den Grünkohl rühren und ca. 10 Min. mitköcheln, bis er sämig ist.
