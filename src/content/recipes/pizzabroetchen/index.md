@@ -3,6 +3,7 @@ title: Pizzabrötchen
 cover: ./cover.jpg
 tags: [Schwein, Snack]
 duration: 30
+rating: 5
 servings: 21
 servingsLabel: Stück
 nutrition: { kcal: 26, protein: 2, carbs: 2, fat: 1 }  # pro Stück, geschätzt
@@ -14,7 +15,7 @@ added: 2026-11-09
 - {{200 g}} körniger Frischkäse
 - {{1}} Eiweiß
 - {{60 g}} Mehl
-- {{20 g}} Parmesan, gerieben
+- {{20 g}} Parmesan, gerieben (zum Bestreuen alternativ Gouda)
 - {{50 g}} magere Schinkenwürfel
 - Salz, Pfeffer, italienische Kräuter
 
@@ -30,3 +31,6 @@ added: 2026-11-09
    ![Teighäufchen auf dem Blech](./schritt-3.jpg)
 4. **Backen:** Ca. 20 Min. backen, bis die Brötchen goldbraun sind.
 5. **Servieren:** Kurz abkühlen lassen und warm oder kalt als Snack servieren.
+
+## Tipps
+- Statt Parmesan zum Bestreuen schmeckt auch geriebener Gouda – er schmilzt schön und wird goldbraun.
